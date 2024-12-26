@@ -2,8 +2,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Check if we're in a blog page and on GitHub Pages
     const currentPath = window.location.pathname;
     const isGitHubPages = window.location.hostname.includes('github.io');
-    const baseUrl = isGitHubPages ? '/salvium' : '';
-    const imagePath = isGitHubPages ? `${baseUrl}/images/` : 'images/';
+    const isLocalhost = window.location.hostname.includes('127.0.0.1') || window.location.hostname.includes('localhost');
+    const baseUrl = isGitHubPages || isLocalhost ? '/salvium' : '';
+    const imagePath = (isGitHubPages || isLocalhost) ? `${baseUrl}/images/` : 'images/';
 
     const headerHtml = `
     <nav class="nav-fixed fixed w-full z-50" style="background: rgba(30, 30, 30, 0.98); backdrop-filter: blur(8px); height: 4rem;">
@@ -80,7 +81,10 @@ document.addEventListener('DOMContentLoaded', function() {
                         <div class="dropdown-menu absolute left-0 mt-2 w-48 rounded-lg shadow-xl hidden" style="background: rgba(30, 30, 30, 0.98);">
                             <div class="py-1">
                                 <a href="${baseUrl}/community.html" class="block px-4 py-2 transition-all duration-200 font-arial" style="color: #40E0D0">Community</a>
-                                <a href="https://github.com/salvium" class="block px-4 py-2 transition-all duration-200 font-arial" style="color: #40E0D0">GitHub</a>
+                                <a href="${baseUrl}/docs/github.html" class="block px-4 py-2 transition-all duration-200 font-arial" style="color: #40E0D0">GitHub</a>
+                                <a href="https://t.me/salviumcommunity" class="block px-4 py-2 transition-all duration-200 font-arial" style="color: #40E0D0">Telegram</a>
+                                <a href="https://discord.gg/salvium" class="block px-4 py-2 transition-all duration-200 font-arial" style="color: #40E0D0">Discord</a>
+                                <a href="https://x.com/salvium_io" class="block px-4 py-2 transition-all duration-200 font-arial" style="color: #40E0D0">Twitter</a>
                             </div>
                         </div>
                     </div>
@@ -157,7 +161,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     </button>
                     <div class="mobile-dropdown-menu hidden pl-4 pb-2">
                         <a href="${baseUrl}/community.html" class="block py-2 transition-all duration-200 font-arial" style="color: #40E0D0">Community</a>
-                        <a href="https://github.com/salvium" class="block py-2 transition-all duration-200 font-arial" style="color: #40E0D0">GitHub</a>
+                        <a href="${baseUrl}/docs/github.html" class="block py-2 transition-all duration-200 font-arial" style="color: #40E0D0">GitHub</a>
+                        <a href="https://t.me/salviumcommunity" class="block py-2 transition-all duration-200 font-arial" style="color: #40E0D0">Telegram</a>
+                        <a href="https://discord.gg/salvium" class="block py-2 transition-all duration-200 font-arial" style="color: #40E0D0">Discord</a>
+                        <a href="https://x.com/salvium_io" class="block py-2 transition-all duration-200 font-arial" style="color: #40E0D0">Twitter</a>
                     </div>
                 </div>
             </div>

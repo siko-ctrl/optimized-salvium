@@ -2,15 +2,16 @@ document.addEventListener('DOMContentLoaded', function() {
     // Get the current path and base URL
     const currentPath = window.location.pathname;
     const isGitHubPages = window.location.hostname.includes('github.io');
-    const baseUrl = isGitHubPages ? '/salvium' : '';
-    const imagePath = isGitHubPages ? `${baseUrl}/images/` : 'images/';
+    const isLocalhost = window.location.hostname.includes('127.0.0.1') || window.location.hostname.includes('localhost');
+    const baseUrl = isGitHubPages || isLocalhost ? '/salvium' : '';
+    const imagePath = (isGitHubPages || isLocalhost) ? `${baseUrl}/images/` : 'images/';
     
     const footerHtml = `
     <footer class="border-t border-[#40E0D0]/10 mt-0 pt-16">
         <div class="container mx-auto px-4 py-12">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                 <div class="text-center">
-                    <img src="images/salvium_coin_square_white_512x512px_transparent-1024.webp" 
+                    <img src="/salvium/images/salvium_coin_square_white_512x512px_transparent-1024.webp" 
                          alt="Salvium Logo" 
                          style="height: 80px; width: auto;" 
                          class="mb-6 mx-auto">
@@ -26,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <a href="https://discord.gg/salvium" class="hover:opacity-80 transition-opacity">
                             <i class="fa-brands fa-discord text-2xl" style="color: #40E0D0 !important;"></i>
                         </a>
-                        <a href="https://github.com/salvium" class="hover:opacity-80 transition-opacity">
+                        <a href="${baseUrl}/docs/github.html" class="hover:opacity-80 transition-opacity">
                             <i class="fa-brands fa-github text-2xl" style="color: #40E0D0 !important;"></i>
                         </a>
                     </div>
