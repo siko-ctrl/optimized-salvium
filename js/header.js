@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Check if we're in a blog page
-    const isBlogPage = window.location.pathname.includes('/blog/');
-    const baseUrl = '';  
-    const imagePath = `${baseUrl}/images/`;
+    // Check if we're in a blog page and on GitHub Pages
+    const currentPath = window.location.pathname;
+    const isGitHubPages = window.location.hostname.includes('github.io');
+    const baseUrl = isGitHubPages ? '/salvium' : '';
+    const imagePath = isGitHubPages ? `${baseUrl}/images/` : 'images/';
 
     const headerHtml = `
     <nav class="nav-fixed fixed w-full z-50" style="background: rgba(30, 30, 30, 0.98); backdrop-filter: blur(8px); height: 4rem;">
