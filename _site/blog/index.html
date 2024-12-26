@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Salvium Protocol</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/salvium/css/typography.css">
+    <link href="https://unpkg.com/tailwindcss@^2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/salvium/css/design-system.css">
+    <link rel="stylesheet" href="/salvium/css/cards.css">
+    <link rel="stylesheet" href="/salvium/css/blog-post.css">
+    
+    <!-- Custom Styles -->
+    <style>
+        :root {
+            --color-primary: #00bfa5;
+            --color-primary-dark: #009688;
+            --color-bg-dark: #1e1e1e;
+            --color-bg-darker: rgba(30, 30, 30, 0.95);
+            --color-text: #e0e0e0;
+            --font-primary: 'Josefin Sans', sans-serif;
+            --radius-sm: 2px;
+            --radius-md: 4px;
+            --radius-lg: 4px;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            background-color: var(--color-bg-dark);
+            color: var(--color-text);
+            padding-top: 30px;
+        }
+
+        .mobile-menu {
+            display: none;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        /* Gradient Text */
+        .gradient-text {
+            background: linear-gradient(45deg, #00bfa5, #40E0D0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        /* Navigation styles */
+        .nav-fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            background: linear-gradient(to bottom, rgba(30, 30, 30, 0.19), rgba(30, 30, 30, 0.61));
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-bottom: 1px solid rgba(0, 191, 165, 0.1);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-[#1e1e1e]">
+    <!-- Particles Container -->
+    <div id="particles" class="fixed inset-0 pointer-events-none z-0"></div>
+
+    <!-- Content -->
+    <head>
+    <link rel="preconnect" href="http://localhost:4000">
+    <link rel="dns-prefetch" href="http://localhost:4000">
+    
+    <!-- Preload first 4 post images -->
+    
+        
+            <link rel="preload" as="image" href="/salvium/images/blog/difficulty-algo.webp">
+        
+    
+        
+            <link rel="preload" as="image" href="/salvium/images/optimized/Blog%20The%20Evo%20or%20Privacy.webp">
+        
+    
+        
+            <link rel="preload" as="image" href="/salvium/images/blog/wallet-launch.webp">
+        
+    
+        
+            <link rel="preload" as="image" href="/salvium/images/blog/new-dawn.webp">
+        
+    
+</head>
+
+<link rel="stylesheet" href="/salvium/blog/assets/css/blog.css">
+
+<main class="relative z-10">
+    <!-- Hero Section -->
+    <section class="blog-hero">
+        <div class="absolute inset-0">
+            <picture>
+                <source srcset="/salvium/images/newimages/Page%20Headers/Blog%20Header.webp" type="image/webp">
+                <img 
+                    src="/salvium/images/newimages/Page%20Headers/Blog%20Header.jpg" 
+                    alt="Blog Header" 
+                    class="blog-hero__image"
+                    width="1920"
+                    height="1080"
+                    loading="eager"
+                    fetchpriority="high">
+            </picture>
+            <div class="absolute inset-0 bg-gradient-to-r from-black to-transparent opacity-75"></div>
+        </div>
+        <div class="blog-hero__content">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 text-center tracking-tight">
+                        Salvium <span class="gradient-text">Blog</span>
+                    </h1>
+                    <p class="text-xl text-gray-300 mb-8 text-center mx-auto max-w-2xl font-light">
+                        Stay updated with the latest news, developments, and insights from the Salvium team.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container mx-auto px-4 -mt-12 pb-16">
+        <div class="blog-grid mb-12">
+            
+            <div class="blog-grid-item">
+                <article class="ecosystem-card h-full flex flex-col">
+                    
+                    <a href="/salvium/blog/2024/12/18/v06-series-update/">
+                        <div class="blog-post-image-container">
+                            
+                            <img 
+                                src="/salvium/images/blog/difficulty-algo.webp"
+                                alt="Understanding Salvium's v0.6 Series - Improved Difficulty Algorithm" 
+                                class="blog-post-image"
+                                
+                                fetchpriority="high"
+                                loading="eager"
+                                
+                                decoding="async">
+                            
+                            <link rel="preload" as="image" href="/salvium/images/blog/difficulty-algo.webp">
+                            
+                        </div>
+                    </a>
+                    
+                    <div class="card-content flex-1 flex flex-col">
+                        
+                        <div class="mb-4">
+                            <span class="card-tag">
+                                Development
+                            </span>
+                        </div>
+                        
+                        <a href="/salvium/blog/2024/12/18/v06-series-update/" class="hover:text-[#00bfa5] transition-colors">
+                            <h2 class="card-title mb-4">Understanding Salvium's v0.6 Series - Improved Difficulty Algorithm</h2>
+                        </a>
+                        <p class="card-description flex-1">Introducing key improvements in Salvium v0.6, featuring a new difficulty adjustment algorithm for better network stability.</p>
+                        <div class="flex items-center justify-between mt-auto pt-4">
+                            <time datetime="2024-12-18T12:00:00+02:00" class="text-sm text-[#b0b0b0]">
+                                December 18, 2024
+                            </time>
+                            <a href="/salvium/blog/2024/12/18/v06-series-update/" class="card-link">
+                                Read More 
+                                <i class="fas fa-chevron-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="blog-grid-item">
+                <article class="ecosystem-card h-full flex flex-col">
+                    
+                    <a href="/salvium/blog/2024/12/18/evolution-of-privacy/">
+                        <div class="blog-post-image-container">
+                            
+                            <img 
+                                src="/salvium/images/optimized/Blog%20The%20Evo%20or%20Privacy.webp"
+                                alt="The Evolution of Privacy in Cryptocurrency" 
+                                class="blog-post-image"
+                                
+                                fetchpriority="high"
+                                loading="eager"
+                                
+                                decoding="async">
+                            
+                            <link rel="preload" as="image" href="/salvium/images/optimized/Blog%20The%20Evo%20or%20Privacy.webp">
+                            
+                        </div>
+                    </a>
+                    
+                    <div class="card-content flex-1 flex flex-col">
+                        
+                        <div class="mb-4">
+                            <span class="card-tag">
+                                Privacy
+                            </span>
+                        </div>
+                        
+                        <a href="/salvium/blog/2024/12/18/evolution-of-privacy/" class="hover:text-[#00bfa5] transition-colors">
+                            <h2 class="card-title mb-4">The Evolution of Privacy in Cryptocurrency</h2>
+                        </a>
+                        <p class="card-description flex-1">A look at how cryptocurrency privacy has evolved from its early days to modern compliance-aware solutions.</p>
+                        <div class="flex items-center justify-between mt-auto pt-4">
+                            <time datetime="2024-12-18T11:00:00+02:00" class="text-sm text-[#b0b0b0]">
+                                December 18, 2024
+                            </time>
+                            <a href="/salvium/blog/2024/12/18/evolution-of-privacy/" class="card-link">
+                                Read More 
+                                <i class="fas fa-chevron-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="blog-grid-item">
+                <article class="ecosystem-card h-full flex flex-col">
+                    
+                    <a href="/salvium/blog/2024/12/18/desktop-wallet-launch/">
+                        <div class="blog-post-image-container">
+                            
+                            <img 
+                                src="/salvium/images/blog/wallet-launch.webp"
+                                alt="Introducing Our New Desktop Wallet" 
+                                class="blog-post-image"
+                                
+                                fetchpriority="high"
+                                loading="eager"
+                                
+                                decoding="async">
+                            
+                            <link rel="preload" as="image" href="/salvium/images/blog/wallet-launch.webp">
+                            
+                        </div>
+                    </a>
+                    
+                    <div class="card-content flex-1 flex flex-col">
+                        
+                        <div class="mb-4">
+                            <span class="card-tag">
+                                Product
+                            </span>
+                        </div>
+                        
+                        <a href="/salvium/blog/2024/12/18/desktop-wallet-launch/" class="hover:text-[#00bfa5] transition-colors">
+                            <h2 class="card-title mb-4">Introducing Our New Desktop Wallet</h2>
+                        </a>
+                        <p class="card-description flex-1">Announcing the launch of our new desktop wallet, designed to provide a seamless and secure experience for managing your digital assets.</p>
+                        <div class="flex items-center justify-between mt-auto pt-4">
+                            <time datetime="2024-12-18T11:00:00+02:00" class="text-sm text-[#b0b0b0]">
+                                December 18, 2024
+                            </time>
+                            <a href="/salvium/blog/2024/12/18/desktop-wallet-launch/" class="card-link">
+                                Read More 
+                                <i class="fas fa-chevron-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="blog-grid-item">
+                <article class="ecosystem-card h-full flex flex-col">
+                    
+                    <a href="/salvium/blog/2024/12/18/dawn-of-new-market/">
+                        <div class="blog-post-image-container">
+                            
+                            <img 
+                                src="/salvium/images/blog/new-dawn.webp"
+                                alt="The Dawn of a New Market" 
+                                class="blog-post-image"
+                                
+                                fetchpriority="high"
+                                loading="eager"
+                                
+                                decoding="async">
+                            
+                            <link rel="preload" as="image" href="/salvium/images/blog/new-dawn.webp">
+                            
+                        </div>
+                    </a>
+                    
+                    <div class="card-content flex-1 flex flex-col">
+                        
+                        <div class="mb-4">
+                            <span class="card-tag">
+                                Market
+                            </span>
+                        </div>
+                        
+                        <a href="/salvium/blog/2024/12/18/dawn-of-new-market/" class="hover:text-[#00bfa5] transition-colors">
+                            <h2 class="card-title mb-4">The Dawn of a New Market</h2>
+                        </a>
+                        <p class="card-description flex-1">A new market opportunity emerges as privacy coins evolve to meet regulatory requirements while maintaining strong privacy features.</p>
+                        <div class="flex items-center justify-between mt-auto pt-4">
+                            <time datetime="2024-12-18T10:00:00+02:00" class="text-sm text-[#b0b0b0]">
+                                December 18, 2024
+                            </time>
+                            <a href="/salvium/blog/2024/12/18/dawn-of-new-market/" class="card-link">
+                                Read More 
+                                <i class="fas fa-chevron-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="blog-grid-item">
+                <article class="ecosystem-card h-full flex flex-col">
+                    
+                    <a href="/salvium/blog/2024/12/18/redefining-cryptocurrency/">
+                        <div class="blog-post-image-container">
+                            
+                            <img 
+                                src="/salvium/images/optimized/Blog%20Crypto%20landscape.webp"
+                                alt="Redefining Cryptocurrency for the Modern Era" 
+                                class="blog-post-image"
+                                
+                                fetchpriority="high"
+                                loading="eager"
+                                
+                                decoding="async">
+                            
+                            <link rel="preload" as="image" href="/salvium/images/optimized/Blog%20Crypto%20landscape.webp">
+                            
+                        </div>
+                    </a>
+                    
+                    <div class="card-content flex-1 flex flex-col">
+                        
+                        <div class="mb-4">
+                            <span class="card-tag">
+                                Technology
+                            </span>
+                        </div>
+                        
+                        <a href="/salvium/blog/2024/12/18/redefining-cryptocurrency/" class="hover:text-[#00bfa5] transition-colors">
+                            <h2 class="card-title mb-4">Redefining Cryptocurrency for the Modern Era</h2>
+                        </a>
+                        <p class="card-description flex-1">A fresh perspective on how modern cryptocurrencies are evolving to meet the demands of today's financial landscape while maintaining core blockchain principles.</p>
+                        <div class="flex items-center justify-between mt-auto pt-4">
+                            <time datetime="2024-12-18T09:00:00+02:00" class="text-sm text-[#b0b0b0]">
+                                December 18, 2024
+                            </time>
+                            <a href="/salvium/blog/2024/12/18/redefining-cryptocurrency/" class="card-link">
+                                Read More 
+                                <i class="fas fa-chevron-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="blog-grid-item">
+                <article class="ecosystem-card h-full flex flex-col">
+                    
+                    <a href="/salvium/blog/2024/12/18/privacy-ama/">
+                        <div class="blog-post-image-container">
+                            
+                            <img 
+                                src="/salvium/images/blog/Blog%20AMA%20PP.webp"
+                                alt="TRANSCRIPT - Pursuit of Privacy AMA" 
+                                class="blog-post-image"
+                                
+                                fetchpriority="high"
+                                loading="eager"
+                                
+                                decoding="async">
+                            
+                            <link rel="preload" as="image" href="/salvium/images/blog/Blog%20AMA%20PP.webp">
+                            
+                        </div>
+                    </a>
+                    
+                    <div class="card-content flex-1 flex flex-col">
+                        
+                        <div class="mb-4">
+                            <span class="card-tag">
+                                Community
+                            </span>
+                        </div>
+                        
+                        <a href="/salvium/blog/2024/12/18/privacy-ama/" class="hover:text-[#00bfa5] transition-colors">
+                            <h2 class="card-title mb-4">TRANSCRIPT - Pursuit of Privacy AMA</h2>
+                        </a>
+                        <p class="card-description flex-1">Full transcript of our recent AMA session discussing privacy in cryptocurrency and Salvium's unique approach.</p>
+                        <div class="flex items-center justify-between mt-auto pt-4">
+                            <time datetime="2024-12-18T08:00:00+02:00" class="text-sm text-[#b0b0b0]">
+                                December 18, 2024
+                            </time>
+                            <a href="/salvium/blog/2024/12/18/privacy-ama/" class="card-link">
+                                Read More 
+                                <i class="fas fa-chevron-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+        </div>
+
+        <!-- Pagination -->
+        
+        <div class="flex justify-center space-x-4">
+            
+            
+            
+            <a href="/salvium/blog/page/2/" class="btn-primary px-6 py-2 rounded-md">
+                Next
+            </a>
+            
+        </div>
+        
+    </div>
+</main>
+
+<script defer>
+    // Optimized image loading
+    document.addEventListener('DOMContentLoaded', () => {
+        const images = document.querySelectorAll('img[loading="lazy"]');
+        
+        function loadImage(img) {
+            img.classList.add('loaded');
+        }
+        
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        loadImage(entry.target);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            });
+            
+            images.forEach(img => imageObserver.observe(img));
+        } else {
+            images.forEach(loadImage);
+        }
+    });
+</script>
+
+
+    <!-- Footer will be injected here -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script>
+        window.jekyllPaths = {
+            root: '/salvium',
+            images: '/salvium/images',
+            css: '/salvium/css',
+            js: '/salvium/js'
+        };
+    </script>
+    <script src="/salvium/js/header_jekyll.js"></script>
+    <script src="/salvium/js/footer_jekyll.js"></script>
+    <script src="/salvium/js/particles.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

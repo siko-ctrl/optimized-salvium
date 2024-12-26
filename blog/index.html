@@ -1,0 +1,147 @@
+---
+layout: default
+title: Blog
+---
+
+<head>
+    <link rel="preconnect" href="{{ site.url }}">
+    <link rel="dns-prefetch" href="{{ site.url }}">
+    
+    <!-- Preload first 4 post images -->
+    {% for post in paginator.posts limit:4 %}
+        {% if post.image %}
+            <link rel="preload" as="image" href="{{ post.image | relative_url }}">
+        {% endif %}
+    {% endfor %}
+</head>
+
+<link rel="stylesheet" href="{{ site.baseurl }}/blog/assets/css/blog.css">
+
+<main class="relative z-10">
+    <!-- Hero Section -->
+    <section class="blog-hero">
+        <div class="absolute inset-0">
+            <picture>
+                <source srcset="{{ '/images/newimages/Page Headers/Blog Header.webp' | relative_url }}" type="image/webp">
+                <img 
+                    src="{{ '/images/newimages/Page Headers/Blog Header.jpg' | relative_url }}" 
+                    alt="Blog Header" 
+                    class="blog-hero__image"
+                    width="1920"
+                    height="1080"
+                    loading="eager"
+                    fetchpriority="high">
+            </picture>
+            <div class="absolute inset-0 bg-gradient-to-r from-black to-transparent opacity-75"></div>
+        </div>
+        <div class="blog-hero__content">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 text-center tracking-tight">
+                        Salvium <span class="gradient-text">Blog</span>
+                    </h1>
+                    <p class="text-xl text-gray-300 mb-8 text-center mx-auto max-w-2xl font-light">
+                        Stay updated with the latest news, developments, and insights from the Salvium team.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container mx-auto px-4 -mt-12 pb-16">
+        <div class="blog-grid mb-12">
+            {% for post in paginator.posts %}
+            <div class="blog-grid-item">
+                <article class="ecosystem-card h-full flex flex-col">
+                    {% if post.image %}
+                    <a href="{{ post.url | relative_url }}">
+                        <div class="blog-post-image-container">
+                            {% assign priority = forloop.index <= 4 %}
+                            <img 
+                                src="{{ post.image | relative_url }}"
+                                alt="{{ post.title }}" 
+                                class="blog-post-image"
+                                {% if priority %}
+                                fetchpriority="high"
+                                loading="eager"
+                                {% else %}
+                                loading="lazy"
+                                {% endif %}
+                                decoding="async">
+                            {% if priority %}
+                            <link rel="preload" as="image" href="{{ post.image | relative_url }}">
+                            {% endif %}
+                        </div>
+                    </a>
+                    {% endif %}
+                    <div class="card-content flex-1 flex flex-col">
+                        {% if post.categories %}
+                        <div class="mb-4">
+                            <span class="card-tag">
+                                {{ post.categories | first }}
+                            </span>
+                        </div>
+                        {% endif %}
+                        <a href="{{ post.url | relative_url }}" class="hover:text-[#00bfa5] transition-colors">
+                            <h2 class="card-title mb-4">{{ post.title }}</h2>
+                        </a>
+                        <p class="card-description flex-1">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+                        <div class="flex items-center justify-between mt-auto pt-4">
+                            <time datetime="{{ post.date | date_to_xmlschema }}" class="text-sm text-[#b0b0b0]">
+                                {{ post.date | date: "%B %d, %Y" }}
+                            </time>
+                            <a href="{{ post.url | relative_url }}" class="card-link">
+                                Read More 
+                                <i class="fas fa-chevron-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Pagination -->
+        {% if paginator.total_pages > 1 %}
+        <div class="flex justify-center space-x-4">
+            {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path | relative_url }}" class="btn-primary px-6 py-2 rounded-md">
+                Previous
+            </a>
+            {% endif %}
+            
+            {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path | relative_url }}" class="btn-primary px-6 py-2 rounded-md">
+                Next
+            </a>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+</main>
+
+<script defer>
+    // Optimized image loading
+    document.addEventListener('DOMContentLoaded', () => {
+        const images = document.querySelectorAll('img[loading="lazy"]');
+        
+        function loadImage(img) {
+            img.classList.add('loaded');
+        }
+        
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        loadImage(entry.target);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            });
+            
+            images.forEach(img => imageObserver.observe(img));
+        } else {
+            images.forEach(loadImage);
+        }
+    });
+</script>

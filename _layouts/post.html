@@ -1,0 +1,37 @@
+---
+layout: default
+---
+<link rel="stylesheet" href="{{ site.baseurl }}/blog/assets/css/blog.css">
+
+<main class="relative z-10">
+    <article class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+            <!-- Header Image -->
+            <div class="relative mb-8 md:mb-12">
+                {% if page.image %}
+                <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="w-full h-[300px] md:h-[450px] lg:h-[600px] object-cover">
+                {% else %}
+                <img src="{{ '/images/newimages/Page Headers/Blog Header.jpg' | relative_url }}" alt="Blog Header" class="w-full h-[300px] md:h-[450px] lg:h-[600px] object-cover">
+                {% endif %}
+            </div>
+
+            <div class="py-3 md:py-4">
+                <h1 class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-2 font-heading">{{ page.title }}</h1>
+                <div class="flex items-center text-gray-300 text-sm md:text-base mb-3 md:mb-4">
+                    <time datetime="{{ page.date | date_to_xmlschema }}" class="font-medium">{{ page.date | date: "%B %d, %Y" }}</time>
+                    {% if page.categories %}
+                    <span class="mx-2 text-[#40E0D0]">•</span>
+                    <span style="background: rgba(0, 191, 165, 0.1); color: #00bfa5; padding: 0.25rem 0.75rem; border-radius: 2px; font-size: 0.875rem; display: inline-block; font-family: 'Inter', Arial, sans-serif; text-transform: uppercase;">{{ page.categories | first }}</span>
+                    {% endif %}
+                </div>
+            </div>
+            
+            <div class="prose prose-invert prose-lg mx-auto bg-[#2a2a2a] rounded-none shadow-lg mb-12 p-8">
+                {{ content }}
+            </div>
+        </div>
+    </article>
+
+    <!-- Blog Navigation -->
+    {% include blog_nav.html %}
+</main>
