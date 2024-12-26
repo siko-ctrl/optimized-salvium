@@ -17,14 +17,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add font styles
     const fontStyles = document.createElement('style');
     fontStyles.textContent = `
-        .font-josefin {
-            font-family: 'Josefin Sans', sans-serif !important;
-        }
-        .font-inter {
-            font-family: 'Inter', sans-serif !important;
-        }
         .nav-fixed button, .nav-fixed a {
-            font-family: 'Josefin Sans', sans-serif !important;
+            font-family: var(--font-heading) !important;
         }
     `;
     document.head.appendChild(fontStyles);
@@ -42,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="hidden md:flex items-center space-x-8">
                     <!-- Get Started Dropdown -->
                     <div class="relative dropdown-container">
-                        <button class="flex items-center dropdown-button font-josefin space-x-2" style="color: #40E0D0">
+                        <button class="flex items-center dropdown-button space-x-2" style="color: #40E0D0; font-family: var(--font-heading)">
                             <span>Get Started</span>
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -50,17 +44,17 @@ document.addEventListener('DOMContentLoaded', function() {
                         </button>
                         <div class="dropdown-menu absolute left-0 mt-2 w-48 rounded-lg shadow-xl hidden" style="background: rgba(30, 30, 30, 0.98);">
                             <div class="py-2">
-                                <a href="${baseUrl}/exchanges.html" class="block px-4 py-2.5 transition-all duration-200 font-josefin hover:bg-[#40E0D0]/10" style="color: #40E0D0">Exchanges</a>
-                                <a href="${baseUrl}/about.html" class="block px-4 py-2.5 transition-all duration-200 font-josefin hover:bg-[#40E0D0]/10" style="color: #40E0D0">About</a>
-                                <a href="${baseUrl}/papers.html" class="block px-4 py-2.5 transition-all duration-200 font-josefin hover:bg-[#40E0D0]/10" style="color: #40E0D0">Lite Paper</a>
-                                <a href="${baseUrl}/download.html" class="block px-4 py-2.5 transition-all duration-200 font-josefin hover:bg-[#40E0D0]/10" style="color: #40E0D0">Downloads</a>
+                                <a href="${baseUrl}/exchanges.html" class="block px-4 py-2.5 transition-all duration-200 hover:bg-[#40E0D0]/10" style="color: #40E0D0; font-family: var(--font-heading)">Exchanges</a>
+                                <a href="${baseUrl}/about.html" class="block px-4 py-2.5 transition-all duration-200 hover:bg-[#40E0D0]/10" style="color: #40E0D0; font-family: var(--font-heading)">About</a>
+                                <a href="${baseUrl}/papers.html" class="block px-4 py-2.5 transition-all duration-200 hover:bg-[#40E0D0]/10" style="color: #40E0D0; font-family: var(--font-heading)">Lite Paper</a>
+                                <a href="${baseUrl}/download.html" class="block px-4 py-2.5 transition-all duration-200 hover:bg-[#40E0D0]/10" style="color: #40E0D0; font-family: var(--font-heading)">Downloads</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Knowledge Dropdown -->
                     <div class="relative dropdown-container">
-                        <button class="flex items-center dropdown-button font-josefin space-x-2" style="color: #40E0D0">
+                        <button class="flex items-center dropdown-button space-x-2" style="color: #40E0D0; font-family: var(--font-heading)">
                             <span>Knowledge</span>
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -68,17 +62,17 @@ document.addEventListener('DOMContentLoaded', function() {
                         </button>
                         <div class="dropdown-menu absolute left-0 mt-2 w-48 rounded-lg shadow-xl hidden" style="background: rgba(30, 30, 30, 0.98);">
                             <div class="py-2">
-                                <a href="${baseUrl}/blog" class="block px-4 py-2.5 transition-all duration-200 font-josefin hover:bg-[#40E0D0]/10" style="color: #40E0D0">Blog</a>
-                                <a href="${baseUrl}/faq.html" class="block px-4 py-2.5 transition-all duration-200 font-josefin hover:bg-[#40E0D0]/10" style="color: #40E0D0">FAQ</a>
-                                <a href="https://siko-ctrl.github.io/docs-salvium/" class="block px-4 py-2.5 transition-all duration-200 font-josefin hover:bg-[#40E0D0]/10" style="color: #40E0D0">Knowledge Base</a>
-                                <a href="${baseUrl}/roadmap.html" class="block px-4 py-2.5 transition-all duration-200 font-josefin hover:bg-[#40E0D0]/10" style="color: #40E0D0">Roadmap</a>
+                                <a href="${baseUrl}/blog" class="block px-4 py-2.5 transition-all duration-200 hover:bg-[#40E0D0]/10" style="color: #40E0D0; font-family: var(--font-heading)">Blog</a>
+                                <a href="${baseUrl}/faq.html" class="block px-4 py-2.5 transition-all duration-200 hover:bg-[#40E0D0]/10" style="color: #40E0D0; font-family: var(--font-heading)">FAQ</a>
+                                <a href="https://siko-ctrl.github.io/docs-salvium/" class="block px-4 py-2.5 transition-all duration-200 hover:bg-[#40E0D0]/10" style="color: #40E0D0; font-family: var(--font-heading)">Knowledge Base</a>
+                                <a href="${baseUrl}/roadmap.html" class="block px-4 py-2.5 transition-all duration-200 hover:bg-[#40E0D0]/10" style="color: #40E0D0; font-family: var(--font-heading)">Roadmap</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Tools Dropdown -->
                     <div class="relative dropdown-container">
-                        <button class="flex items-center dropdown-button font-josefin space-x-2" style="color: #40E0D0">
+                        <button class="flex items-center dropdown-button space-x-2" style="color: #40E0D0; font-family: var(--font-heading)">
                             <span>Tools</span>
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -86,16 +80,16 @@ document.addEventListener('DOMContentLoaded', function() {
                         </button>
                         <div class="dropdown-menu absolute left-0 mt-2 w-48 rounded-lg shadow-xl hidden" style="background: rgba(30, 30, 30, 0.98);">
                             <div class="py-2">
-                                <a href="${baseUrl}/tools.html" class="block px-4 py-2.5 transition-all duration-200 font-josefin hover:bg-[#40E0D0]/10" style="color: #40E0D0">Tools Overview</a>
-                                <a href="${baseUrl}/pools.html" class="block px-4 py-2.5 transition-all duration-200 font-josefin hover:bg-[#40E0D0]/10" style="color: #40E0D0">Mining Pools</a>
-                                <a href="${baseUrl}/stats.html" class="block px-4 py-2.5 transition-all duration-200 font-josefin hover:bg-[#40E0D0]/10" style="color: #40E0D0">Statistics</a>
+                                <a href="${baseUrl}/tools.html" class="block px-4 py-2.5 transition-all duration-200 hover:bg-[#40E0D0]/10" style="color: #40E0D0; font-family: var(--font-heading)">Tools Overview</a>
+                                <a href="${baseUrl}/pools.html" class="block px-4 py-2.5 transition-all duration-200 hover:bg-[#40E0D0]/10" style="color: #40E0D0; font-family: var(--font-heading)">Mining Pools</a>
+                                <a href="${baseUrl}/stats.html" class="block px-4 py-2.5 transition-all duration-200 hover:bg-[#40E0D0]/10" style="color: #40E0D0; font-family: var(--font-heading)">Statistics</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Get Involved Dropdown -->
                     <div class="relative dropdown-container">
-                        <button class="flex items-center dropdown-button font-josefin space-x-2" style="color: #40E0D0">
+                        <button class="flex items-center dropdown-button space-x-2" style="color: #40E0D0; font-family: var(--font-heading)">
                             <span>Get Involved</span>
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -103,11 +97,8 @@ document.addEventListener('DOMContentLoaded', function() {
                         </button>
                         <div class="dropdown-menu absolute left-0 mt-2 w-48 rounded-lg shadow-xl hidden" style="background: rgba(30, 30, 30, 0.98);">
                             <div class="py-2">
-                                <a href="${baseUrl}/community.html" class="block px-4 py-2.5 transition-all duration-200 font-josefin hover:bg-[#40E0D0]/10" style="color: #40E0D0">Community</a>
-                                <a href="${baseUrl}/docs/github.html" class="block px-4 py-2.5 transition-all duration-200 font-josefin hover:bg-[#40E0D0]/10" style="color: #40E0D0">GitHub</a>
-                                <a href="https://t.me/salviumcommunity" class="block px-4 py-2.5 transition-all duration-200 font-josefin hover:bg-[#40E0D0]/10" style="color: #40E0D0">Telegram</a>
-                                <a href="https://discord.gg/salvium" class="block px-4 py-2.5 transition-all duration-200 font-josefin hover:bg-[#40E0D0]/10" style="color: #40E0D0">Discord</a>
-                                <a href="https://x.com/salvium_io" class="block px-4 py-2.5 transition-all duration-200 font-josefin hover:bg-[#40E0D0]/10" style="color: #40E0D0">Twitter</a>
+                                <a href="${baseUrl}/community.html" class="block px-4 py-2.5 transition-all duration-200 hover:bg-[#40E0D0]/10" style="color: #40E0D0; font-family: var(--font-heading)">Community</a>
+                                <a href="${baseUrl}/docs/github.html" class="block px-4 py-2.5 transition-all duration-200 hover:bg-[#40E0D0]/10" style="color: #40E0D0; font-family: var(--font-heading)">GitHub</a>
                             </div>
                         </div>
                     </div>
@@ -115,9 +106,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden">
-                    <button id="mobile-menu-button" class="transition-colors p-2" style="color: #40E0D0" data-mobile-menu>
+                    <button id="mobile-menu-button" class="transition-colors p-2" style="color: #40E0D0; font-family: var(--font-heading)" data-mobile-menu>
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
                     </button>
                 </div>
@@ -129,65 +120,62 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="px-4 py-3 space-y-4 max-h-[calc(100vh-4rem)] overflow-y-auto">
                 <!-- Get Started Section -->
                 <div class="mobile-dropdown">
-                    <button class="w-full flex justify-between items-center text-[#40E0D0] py-2.5 mobile-dropdown-button font-josefin">
+                    <button class="w-full flex justify-between items-center text-[#40E0D0] py-2.5 mobile-dropdown-button" style="font-family: var(--font-heading)">
                         <span>Get Started</span>
                         <svg class="w-4 h-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                         </svg>
                     </button>
                     <div class="mobile-dropdown-menu hidden pl-4 pb-2 space-y-2">
-                        <a href="${baseUrl}/exchanges.html" class="block py-2.5 transition-all duration-200 font-josefin hover:bg-[#40E0D0]/10" style="color: #40E0D0">Exchanges</a>
-                        <a href="${baseUrl}/about.html" class="block py-2.5 transition-all duration-200 font-josefin hover:bg-[#40E0D0]/10" style="color: #40E0D0">About</a>
-                        <a href="${baseUrl}/papers.html" class="block py-2.5 transition-all duration-200 font-josefin hover:bg-[#40E0D0]/10" style="color: #40E0D0">Lite Paper</a>
-                        <a href="${baseUrl}/download.html" class="block py-2.5 transition-all duration-200 font-josefin hover:bg-[#40E0D0]/10" style="color: #40E0D0">Downloads</a>
+                        <a href="${baseUrl}/exchanges.html" class="block py-2.5 transition-all duration-200 hover:bg-[#40E0D0]/10" style="color: #40E0D0; font-family: var(--font-heading)">Exchanges</a>
+                        <a href="${baseUrl}/about.html" class="block py-2.5 transition-all duration-200 hover:bg-[#40E0D0]/10" style="color: #40E0D0; font-family: var(--font-heading)">About</a>
+                        <a href="${baseUrl}/papers.html" class="block py-2.5 transition-all duration-200 hover:bg-[#40E0D0]/10" style="color: #40E0D0; font-family: var(--font-heading)">Lite Paper</a>
+                        <a href="${baseUrl}/download.html" class="block py-2.5 transition-all duration-200 hover:bg-[#40E0D0]/10" style="color: #40E0D0; font-family: var(--font-heading)">Downloads</a>
                     </div>
                 </div>
 
                 <!-- Knowledge Section -->
                 <div class="mobile-dropdown">
-                    <button class="w-full flex justify-between items-center text-[#40E0D0] py-2.5 mobile-dropdown-button font-josefin">
+                    <button class="w-full flex justify-between items-center text-[#40E0D0] py-2.5 mobile-dropdown-button" style="font-family: var(--font-heading)">
                         <span>Knowledge</span>
                         <svg class="w-4 h-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                         </svg>
                     </button>
                     <div class="mobile-dropdown-menu hidden pl-4 pb-2 space-y-2">
-                        <a href="${baseUrl}/blog" class="block py-2.5 transition-all duration-200 font-josefin hover:bg-[#40E0D0]/10" style="color: #40E0D0">Blog</a>
-                        <a href="${baseUrl}/faq.html" class="block py-2.5 transition-all duration-200 font-josefin hover:bg-[#40E0D0]/10" style="color: #40E0D0">FAQ</a>
-                        <a href="https://siko-ctrl.github.io/docs-salvium/" class="block py-2.5 transition-all duration-200 font-josefin hover:bg-[#40E0D0]/10" style="color: #40E0D0">Knowledge Base</a>
-                        <a href="${baseUrl}/roadmap.html" class="block py-2.5 transition-all duration-200 font-josefin hover:bg-[#40E0D0]/10" style="color: #40E0D0">Roadmap</a>
+                        <a href="${baseUrl}/blog" class="block py-2.5 transition-all duration-200 hover:bg-[#40E0D0]/10" style="color: #40E0D0; font-family: var(--font-heading)">Blog</a>
+                        <a href="${baseUrl}/faq.html" class="block py-2.5 transition-all duration-200 hover:bg-[#40E0D0]/10" style="color: #40E0D0; font-family: var(--font-heading)">FAQ</a>
+                        <a href="https://siko-ctrl.github.io/docs-salvium/" class="block py-2.5 transition-all duration-200 hover:bg-[#40E0D0]/10" style="color: #40E0D0; font-family: var(--font-heading)">Knowledge Base</a>
+                        <a href="${baseUrl}/roadmap.html" class="block py-2.5 transition-all duration-200 hover:bg-[#40E0D0]/10" style="color: #40E0D0; font-family: var(--font-heading)">Roadmap</a>
                     </div>
                 </div>
 
                 <!-- Tools Section -->
                 <div class="mobile-dropdown">
-                    <button class="w-full flex justify-between items-center text-[#40E0D0] py-2.5 mobile-dropdown-button font-josefin">
+                    <button class="w-full flex justify-between items-center text-[#40E0D0] py-2.5 mobile-dropdown-button" style="font-family: var(--font-heading)">
                         <span>Tools</span>
                         <svg class="w-4 h-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                         </svg>
                     </button>
                     <div class="mobile-dropdown-menu hidden pl-4 pb-2 space-y-2">
-                        <a href="${baseUrl}/tools.html" class="block py-2.5 transition-all duration-200 font-josefin hover:bg-[#40E0D0]/10" style="color: #40E0D0">Tools Overview</a>
-                        <a href="${baseUrl}/pools.html" class="block py-2.5 transition-all duration-200 font-josefin hover:bg-[#40E0D0]/10" style="color: #40E0D0">Mining Pools</a>
-                        <a href="${baseUrl}/stats.html" class="block py-2.5 transition-all duration-200 font-josefin hover:bg-[#40E0D0]/10" style="color: #40E0D0">Statistics</a>
+                        <a href="${baseUrl}/tools.html" class="block py-2.5 transition-all duration-200 hover:bg-[#40E0D0]/10" style="color: #40E0D0; font-family: var(--font-heading)">Tools Overview</a>
+                        <a href="${baseUrl}/pools.html" class="block py-2.5 transition-all duration-200 hover:bg-[#40E0D0]/10" style="color: #40E0D0; font-family: var(--font-heading)">Mining Pools</a>
+                        <a href="${baseUrl}/stats.html" class="block py-2.5 transition-all duration-200 hover:bg-[#40E0D0]/10" style="color: #40E0D0; font-family: var(--font-heading)">Statistics</a>
                     </div>
                 </div>
 
                 <!-- Get Involved Section -->
                 <div class="mobile-dropdown">
-                    <button class="w-full flex justify-between items-center text-[#40E0D0] py-2.5 mobile-dropdown-button font-josefin">
+                    <button class="w-full flex justify-between items-center text-[#40E0D0] py-2.5 mobile-dropdown-button" style="font-family: var(--font-heading)">
                         <span>Get Involved</span>
                         <svg class="w-4 h-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                         </svg>
                     </button>
                     <div class="mobile-dropdown-menu hidden pl-4 pb-2 space-y-2">
-                        <a href="${baseUrl}/community.html" class="block py-2.5 transition-all duration-200 font-josefin hover:bg-[#40E0D0]/10" style="color: #40E0D0">Community</a>
-                        <a href="${baseUrl}/docs/github.html" class="block py-2.5 transition-all duration-200 font-josefin hover:bg-[#40E0D0]/10" style="color: #40E0D0">GitHub</a>
-                        <a href="https://t.me/salviumcommunity" class="block py-2.5 transition-all duration-200 font-josefin hover:bg-[#40E0D0]/10" style="color: #40E0D0">Telegram</a>
-                        <a href="https://discord.gg/salvium" class="block py-2.5 transition-all duration-200 font-josefin hover:bg-[#40E0D0]/10" style="color: #40E0D0">Discord</a>
-                        <a href="https://x.com/salvium_io" class="block py-2.5 transition-all duration-200 font-josefin hover:bg-[#40E0D0]/10" style="color: #40E0D0">Twitter</a>
+                        <a href="${baseUrl}/community.html" class="block py-2.5 transition-all duration-200 hover:bg-[#40E0D0]/10" style="color: #40E0D0; font-family: var(--font-heading)">Community</a>
+                        <a href="${baseUrl}/docs/github.html" class="block py-2.5 transition-all duration-200 hover:bg-[#40E0D0]/10" style="color: #40E0D0; font-family: var(--font-heading)">GitHub</a>
                     </div>
                 </div>
             </div>
@@ -205,33 +193,40 @@ document.addEventListener('DOMContentLoaded', function() {
             const button = dropdown.querySelector('.dropdown-button');
             const menu = dropdown.querySelector('.dropdown-menu');
 
-            // Prevent clicks on menu from closing dropdown
-            menu.addEventListener('click', (e) => {
-                e.stopPropagation();
-            });
-
             button.addEventListener('click', (e) => {
                 e.stopPropagation();
-                e.preventDefault();
+                const isActive = !menu.classList.contains('hidden');
                 
-                // Close all other dropdown menus first
+                // Close all other dropdowns first
                 document.querySelectorAll('.dropdown-menu').forEach(otherMenu => {
                     if (otherMenu !== menu && !otherMenu.classList.contains('hidden')) {
                         otherMenu.classList.add('hidden');
                     }
                 });
-                
+
                 menu.classList.toggle('hidden');
+                
+                // Add active state to button
+                button.classList.toggle('text-[#40E0D0]/80', !isActive);
+            });
+        });
+
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', () => {
+            document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                if (!menu.classList.contains('hidden')) {
+                    menu.classList.add('hidden');
+                }
             });
         });
 
         // Mobile menu
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuButton = document.querySelector('[data-mobile-menu]');
+        const mobileMenuPanel = document.querySelector('[data-mobile-menu-panel]');
 
-        if (mobileMenuButton && mobileMenu) {
+        if (mobileMenuButton && mobileMenuPanel) {
             mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
+                mobileMenuPanel.classList.toggle('hidden');
             });
         }
 
@@ -239,6 +234,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('.mobile-dropdown').forEach(dropdown => {
             const button = dropdown.querySelector('.mobile-dropdown-button');
             const menu = dropdown.querySelector('.mobile-dropdown-menu');
+            const icon = button.querySelector('svg');
 
             button.addEventListener('click', () => {
                 // Close all other mobile dropdown menus first
@@ -246,25 +242,17 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (otherMenu !== menu && !otherMenu.classList.contains('hidden')) {
                         otherMenu.classList.add('hidden');
                         const otherIcon = otherMenu.parentElement.querySelector('svg');
-                        otherIcon.classList.remove('rotate-180');
+                        if (otherIcon) {
+                            otherIcon.style.transform = 'rotate(0deg)';
+                        }
                     }
                 });
 
                 menu.classList.toggle('hidden');
-                const icon = button.querySelector('svg');
-                icon.classList.toggle('rotate-180');
+                if (icon) {
+                    icon.style.transform = menu.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+                }
             });
-        });
-
-        // Close dropdowns when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!e.target.closest('.dropdown-container')) {
-                document.querySelectorAll('.dropdown-menu').forEach(menu => {
-                    if (!menu.classList.contains('hidden')) {
-                        menu.classList.add('hidden');
-                    }
-                });
-            }
         });
     }
 
