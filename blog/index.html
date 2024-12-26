@@ -57,18 +57,24 @@ title: Blog
                 <article class="ecosystem-card">
                     {% if post.image %}
                     <div class="blog-post-image-container">
-                        {% assign priority = forloop.index <= 4 %}
-                        <img 
-                            src="{{ post.image | relative_url }}"
-                            alt="{{ post.title }}" 
-                            class="blog-post-image"
-                            {% if priority %}
-                            fetchpriority="high"
-                            loading="eager"
+                        <a href="{{ post.url | relative_url }}" class="block hover:opacity-90 transition-opacity">
+                            {% if forloop.index < 5 %}
+                            <img 
+                                src="{{ post.image | relative_url }}"
+                                alt="{{ post.title }}" 
+                                class="blog-post-image"
+                                fetchpriority="high"
+                                loading="eager"
+                                decoding="async">
                             {% else %}
-                            loading="lazy"
+                            <img 
+                                src="{{ post.image | relative_url }}"
+                                alt="{{ post.title }}" 
+                                class="blog-post-image"
+                                loading="lazy"
+                                decoding="async">
                             {% endif %}
-                            decoding="async">
+                        </a>
                     </div>
                     {% endif %}
                     <div class="card-content">
